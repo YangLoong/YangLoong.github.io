@@ -2,39 +2,76 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c3ad900-38b2-4f39-a165-b0d900a9d2b9" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/icons/blog.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/hope.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Gauss-Laplacian算子.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Krisch算子.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Laplacian算子.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-Gauss-Laplacian算子.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-Krisch算子.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-Laplacian算子.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-Prewitt算子.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-Roberts算子.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-Sobel算子.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-all.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena_256x256.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena_512x512.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Prewitt算子.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Roberts算子.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/Sobel算子.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/一阶导数.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/二阶导数.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/像素灰度剖面图.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/梯度算子示意图.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/算子特性比较.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/fft_dct/DCT.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/fft_dct/FFT.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/fft_dct/fft蝶式流程图.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery-3.0.0.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/edge_detection.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/fft_dct/fft_dct.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/stylesheets/github-light.css" afterPath="$PROJECT_DIR$/semantic-ui/stylesheets/github-light.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/stylesheets/normalize.css" afterPath="$PROJECT_DIR$/semantic-ui/stylesheets/normalize.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/stylesheets/stylesheet.css" afterPath="$PROJECT_DIR$/semantic-ui/stylesheets/stylesheet.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_01.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_02.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_03.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_04.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_05.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_06.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_07.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_08.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_09.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/image/ORL Face Recognition_页面_13.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image10.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image11.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image12.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image13.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image14.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image15.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image17.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image18.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image19.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image20.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image21.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image22.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image23.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image24.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image25.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image26.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image27.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image28.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image29.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image3.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image5.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image6.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image7.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/image/image9.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/orl_face_recognition/orl_face_recognition.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/posts/image_processing/point_operations/point_operations.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Gauss-Laplacian算子.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Gauss-Laplacian算子.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Krisch算子.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Krisch算子.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Laplacian算子.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Laplacian算子.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-Gauss-Laplacian算子.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Lena-Gauss-Laplacian算子.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-Krisch算子.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Lena-Krisch算子.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-Laplacian算子.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Lena-Laplacian算子.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-Prewitt算子.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Lena-Prewitt算子.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-Roberts算子.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Lena-Roberts算子.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-Sobel算子.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Lena-Sobel算子.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena-all.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Lena-all.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena_256x256.jpg" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Lena_256x256.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Lena_512x512.jpg" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Lena_512x512.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Prewitt算子.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Prewitt算子.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Roberts算子.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Roberts算子.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/Sobel算子.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/Sobel算子.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/一阶导数.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/一阶导数.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/二阶导数.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/二阶导数.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/像素灰度剖面图.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/像素灰度剖面图.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/梯度算子示意图.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/梯度算子示意图.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/算子特性比较.png" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/image/算子特性比较.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/fft_dct/DCT.png" afterPath="$PROJECT_DIR$/posts/image_processing/fft_dct/image/DCT.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/fft_dct/FFT.png" afterPath="$PROJECT_DIR$/posts/image_processing/fft_dct/image/FFT.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/posts/image_processing/fft_dct/fft蝶式流程图.png" afterPath="$PROJECT_DIR$/posts/image_processing/fft_dct/image/fft蝶式流程图.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/image_processing/edge_detection/edge_detection.html" afterPath="$PROJECT_DIR$/posts/image_processing/edge_detection/edge_detection.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/posts/image_processing/fft_dct/fft_dct.html" afterPath="$PROJECT_DIR$/posts/image_processing/fft_dct/fft_dct.html" />
     </list>
     <ignored path="YangLoong.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,31 +95,14 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="77" column="37" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
-              <folding />
+            <state relative-caret-position="166">
+              <caret line="161" column="38" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+              <folding>
+                <element signature="n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#2;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FFT.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/posts/image_processing/fft_dct/FFT.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DCT.png" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/posts/image_processing/fft_dct/DCT.png">
-          <provider selected="true" editor-type-id="images">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hope.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/hope.jpg">
-          <provider selected="true" editor-type-id="images">
-            <state />
           </provider>
         </entry>
       </file>
@@ -94,6 +114,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/posts/image_processing/point_operations/point_operations.html" />
+        <option value="$PROJECT_DIR$/posts/image_processing/fft_dct/fft_dct.html" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -144,74 +166,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YangLoong.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YangLoong.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YangLoong.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YangLoong.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="image_processing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fft_dct" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YangLoong.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YangLoong.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="posts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="image_processing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="edge_detection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YangLoong.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="YangLoong.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="icons" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -227,17 +181,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\posts\image_processing\orl_face_recognition" />
+      <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\posts\image_processing\point_operations" />
       <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\posts\image_processing\edge_detection" />
       <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\posts" />
       <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\icons" />
-      <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\js" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\posts\image_processing\edge_detection\image" />
+      <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\posts\image_processing\fft_dct\image" />
       <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\posts\image_processing\fft_dct" />
       <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\posts\image_processing" />
       <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\posts" />
-      <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\images" />
-      <recent name="C:\Users\QinYang\Documents\GitHub\YangLoong.github.io\semantic-ui\stylesheets" />
     </key>
   </component>
   <component name="RunManager">
@@ -299,23 +254,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1468053569547</updated>
-      <workItem from="1468053572893" duration="9023000" />
+      <workItem from="1468053572893" duration="11901000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9023000" />
+    <option name="totallyTimeSpent" value="11901000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26096144" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26096144" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24986793" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -349,29 +304,54 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/posts/image_processing/fft_dct/fft_dct.html">
+    <entry file="file://$PROJECT_DIR$/posts/image_processing/fft_dct/image/DCT.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/image_processing/fft_dct/image/FFT.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/posts/image_processing/point_operations/图像处理大作业技术报告new1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        <state relative-caret-position="520">
+          <caret line="14" column="60" selection-start-line="14" selection-start-column="60" selection-end-line="14" selection-end-column="60" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/posts/image_processing/fft_dct/DCT.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/posts/image_processing/fft_dct/fft_dct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="3618" column="29" selection-start-line="3618" selection-start-column="29" selection-end-line="3618" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#span#1;n#p#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#span#1;n#p#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#p#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#svg#0;n#span#3;n#p#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/posts/image_processing/fft_dct/FFT.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/posts/image_processing/point_operations/point_operations.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="296" column="7" selection-start-line="296" selection-start-column="7" selection-end-line="296" selection-end-column="7" />
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="77" column="37" selection-start-line="77" selection-start-column="37" selection-end-line="77" selection-end-column="37" />
-          <folding />
+        <state relative-caret-position="166">
+          <caret line="161" column="38" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
