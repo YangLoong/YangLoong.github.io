@@ -4,28 +4,138 @@
     <meta charset="UTF-8">
     <title>Yangloong&#39;s Blog - GitHub.io by YangLoong</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="semantic-ui/stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="semantic-ui/stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="semantic-ui/stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css" media="screen">
+    <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="semantic-ui/semantic.min.js"></script>
+    <style type="text/css">
+      body{
+        /*background-image: url("images/hope.jpg");*/
+        /*background-position: center;*/
+        /*background-size: 100% 100%;*/
+        background-color: #fba04a;
+      }
+      .ui.main.menu{
+        background-color: transparent;
+      }
+      .page-header{
+        min-height: 25em;
+        text-align: center;
+      }
+      .page-header h1 {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        font-size: 4em;
+        font-weight: normal;
+      }
+      .page-header h2 {
+        font-size: 2em;
+        font-weight: normal;
+      }
+      .blurring.dimmable.image {
+        height:270px;
+      }
+    </style>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('.special.cards .image').dimmer({
+          on: 'hover'
+        });
+      });
+    </script>
   </head>
   <body>
+  <div class="ui borderless fixed inverted main menu">
+    <div class="ui container">
+      <a href="#" class="header item">
+        <img class="logo" src="icons/blog.ico">
+      </a>
+      <div class="right menu">
+        <a class="ui item "><i class="write icon"></i>Blog</a>
+        <a class="ui item "><i class="user icon"></i>About</a>
+        <a class="ui item "><i class="mail icon"></i>Contact</a>
+      </div>
+    </div>
+  </div>
     <section class="page-header">
-      <h1 class="project-name">Yangloong&#39;s Blog - GitHub.io</h1>
-      <h2 class="project-tagline">YangLoong &#39;s Blog</h2>
+      <h1 class="project-name">Yangloong&#39;s Blog</h1>
+      <h2 class="project-tagline">Tomorrow is another day...</h2>
     </section>
 
     <section class="main-content">
-      <h1>
-<a id="yangloonggithubio" class="anchor" href="#yangloonggithubio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>YangLoong.github.io</h1>
+      <!--<h1><a id="yangloonggithubio" class="anchor" href="#yangloonggithubio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>YangLoong.github.io</h1>-->
 
-<h1></h1>
+      <div class="ui raised very padded container segment">
+        <!--<h2>YangLoong 's Blog</h2>-->
+        <h2>Image Processing</h2>
+        <div class="ui special link cards">
+          <div class="card">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                    <div class="ui inverted button" onclick="window.location='posts/image_processing/fft_dct/fft_dct.html';">More details</div>
+                  </div>
+                </div>
+              </div>
+              <img src="posts/image_processing/fft_dct/FFT.png" width="" height="">
+            </div>
 
-<p>YangLoong 's Blog</p>
-<p>Write 1000 words everyday will change your life...</p>
+            <div class="content">
+              <a class="header" href="posts/image_processing/fft_dct/fft_dct.html">FFT&&DCT</a>
+              <div class="meta">
+                <i class="user icon"></i>
+                YangLoong
+              </div>
+              <div class="description">
+                This is an introduction as well as an implementation of FFT&&DCT with C#.
+              </div>
+            </div>
+            <div class="extra content">
+              <span class="right floated">
+                Post at April,25,2016
+              </span>
+            </div>
+          </div>
+          <div class="card">
+            <div class="blurring dimmable image">
+              <div class="ui dimmer">
+                <div class="content">
+                  <div class="center">
+                    <div class="ui inverted button" onclick="window.location='posts/image_processing/edge_detection/edge_detection.html';">More details</div>
+                  </div>
+                </div>
+              </div>
+              <img src="posts/image_processing/edge_detection/Gauss-Laplacian算子.png" width="" height="">
+            </div>
+            <div class="content">
+              <a class="header" href="posts/image_processing/edge_detection/edge_detection.html">Edge Detection</a>
+              <div class="meta">
+                <i class="user icon"></i>
+                YangLoong
+              </div>
+              <div class="description">
+                This is an introduction as well as an implementation of Edge Detection with C#.
+              </div>
+            </div>
+            <div class="extra content">
+              <span class="right floated">
+                Post at May,4,2016
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!--<a class="ui primary huge button" href="">FFT&DCT</a>-->
+        <!--<a class="ui primary huge button" href="">Edge Detection</a>-->
+
+        <h2>Write 1000 words everyday will change your life...</h2>
+      </div>
       <footer class="site-footer">
 
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
 
     </section>
