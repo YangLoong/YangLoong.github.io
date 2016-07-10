@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Yangloong&#39;s Blog - GitHub.io by YangLoong</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="semantic-ui/stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="semantic-ui/stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="semantic-ui/stylesheets/github-light.css" media="screen">
+    <!--<link rel="stylesheet" type="text/css" href="semantic-ui/stylesheets/normalize.css" media="screen">-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
+    <!--<link rel="stylesheet" type="text/css" href="semantic-ui/stylesheets/stylesheet.css" media="screen">-->
+    <!--<link rel="stylesheet" type="text/css" href="semantic-ui/stylesheets/github-light.css" media="screen">-->
     <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css" media="screen">
     <link rel="shortcut icon" type="image/x-icon" href="icons/yangloong128x128.ico">
     <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
@@ -39,21 +39,187 @@
       .blurring.dimmable.image {
         height:270px;
       }
+      .ui.sticky h2{
+        color: #358aff;
+      }
+      .page-header {
+        color: #fff;
+        text-align: center;
+        background-color: #159957;
+        background-image: linear-gradient(120deg, #155799, #159957);
+      }
+      @media screen and (min-width: 64em) {
+        .page-header {
+          padding: 1rem 6rem 6rem 6rem; } }
+
+      @media screen and (min-width: 42em) and (max-width: 64em) {
+        .page-header {
+          padding: 1rem 4rem 4rem 4rem; } }
+
+      @media screen and (max-width: 42em) {
+        .page-header {
+          padding: 1rem 1rem 3rem 1rem; } }
+      .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-weight: normal;
+        color: #159957; }
+      @media screen and (min-width: 64em) {
+        .main-content {
+          max-width: 64rem;
+          padding: 2rem 6rem;
+          margin: 0 auto;
+          font-size: 1.1rem; } }
+
+      @media screen and (min-width: 42em) and (max-width: 64em) {
+        .main-content {
+          padding: 2rem 4rem;
+          font-size: 1.1rem; } }
+
+      @media screen and (max-width: 42em) {
+        .main-content {
+          padding: 2rem 1rem;
+          font-size: 1rem; } }
+      .site-footer {
+        padding-top: 2rem;
+        margin-top: 2rem;
+        border-top: solid 1px #eff0f1; }
     </style>
     <script type="text/javascript">
       $(document).ready(function () {
+        var 
+                $container           = $('.ui.container.segment'),
+                $followMenu          = $('.main.container').find('.following.menu'),
+                $sectionHeaders      = $container.children('h2'),
+                $sectionBlog         = $container.find('.blog'),
+                $blogHeaders         = $sectionBlog.find('.header'),
+                handler;
+        
+        handler = {
+          
+          createWaypoints: function () {
+            $sectionHeaders
+                    .visibility({
+                      observeChanges: false,
+                      once: false,
+                      offset: 50,
+                      onTopPassed: handler.activate.section,
+                      onTopPassedReverse: handler.activate.previous
+                    });
+
+            $sectionBlog
+                    .visibility({
+                      observeChanges: false,
+                      once: false,
+                      offset: 50,
+                      onTopPassed: handler.activate.blog,
+                      onBottomPassedReverse: handler.activate.blog
+                    });
+          },
+
+          activate: {
+            previous: function () {
+              var
+                      $menuItems = $followMenu.children('.item'),
+                      $section = $menuItems.filter('.active'),
+                      index = $menuItems.index($section);
+              if ($section.prev().length > 0) {
+                $section
+                        .removeClass('active')
+                        .prev('.item')
+                        .addClass('active');
+                $followMenu
+                        .accordion('open', index - 1);
+              }
+            },
+            section: function () {
+              var
+                      $section = $(this),
+                      index = $sectionHeaders.index($section),
+                      $followSection = $followMenu.children('.item'),
+                      $activeSection = $followSection.eq(index),
+                      isActive = $activeSection.hasClass('active');
+              if (!isActive) {
+                $followSection.filter('.active')
+                        .removeClass('active');
+                $activeSection
+                        .addClass('active');
+                $followMenu
+                        .accordion('open', index);
+              }
+            },
+            blog: function () {
+              var
+                      $section = $(this).find('.header').eq(0),
+                      index = $blogHeaders.index($section),
+                      $followSection = $followMenu.find('.menu > .item'),
+                      $activeSection = $followSection.eq(index),
+                      inClosedTab = ($(this).closest('.tab:not(.active)').length > 0),
+                      anotherBlog = ($(this).filter('.another.blog').length > 0),
+                      isActive = $activeSection.hasClass('active');
+              if (index !== -1 && !inClosedTab && !anotherBlog && !isActive) {
+                $followSection.filter('.active')
+                        .removeClass('active');
+                $activeSection
+                        .addClass('active');
+              }
+            }
+          }
+        };
+        handler.createWaypoints();
+        $('.yangloong').visibility({
+          once: false,
+          onBottomPassed: function() {
+            $('.fixed.menu').transition('fade in');
+          },
+          onBottomPassedReverse: function() {
+            $('.fixed.menu').transition('fade out');
+          }
+        });
         $('.special.cards .image').dimmer({
           on: 'hover'
         });
+        $('.title').click(function () {
+          if ($(this).hasClass('active')){
+            $(this).removeClass('active').siblings('.content.menu').hide(500);
+          }else{
+            $(this).addClass('active').siblings('.content.menu').show(500);
+          }
+        });
+        $('.ui.sticky').sticky({
+          context: '#blog3'
+        });
+        $('a.item').click(function () {
+          $(this).addClass('active').siblings().removeClass('active');
+        });
+        $('.ui.right.rail')
+                .find('.following.menu')
+                .find('.menu a[href], .title[href]').on('click',
+                function(event) {
+                  var
+                          id       = $(this).attr('href').replace('#', ''),
+                          $element = $('#' + id),
+                          position = $element.offset().top - 70;
+                  $element.addClass('active');
+                  $('html, body').animate({
+                    scrollTop: position
+                  }, 500);
+                  location.hash = '#' + id;
+                  event.stopImmediatePropagation();
+                  event.preventDefault();
+                  return false;
+                });
       });
     </script>
   </head>
   <body>
-  <div class="ui borderless fixed inverted main menu">
+
+  <div class="ui large stackable top borderless fixed menu" style="visibility:hidden;">
     <div class="ui container">
-      <a href="#" class="header item">
-        <img class="logo" src="icons/blog.ico">
-      </a>
+      <div class="item">
+        <img class="logo" src="icons/yangloong128x128.ico">
+      </div>
+      <div class="ui item"><i class="big github icon"></i><a href="https://yangloong.github.io">YangLoong 's Blog</a></div>
       <div class="right menu">
         <a class="ui item "><i class="write icon"></i>Blog</a>
         <a class="ui item "><i class="user icon"></i>About</a>
@@ -61,135 +227,232 @@
       </div>
     </div>
   </div>
-    <section class="page-header">
-      <h1 class="project-name">Yangloong&#39;s Blog</h1>
-      <h2 class="project-tagline">Tomorrow is another day...</h2>
-    </section>
+  <section class="page-header">
+    <div class="ui borderless yangloong inverted main menu">
+      <div class="main ui container">
+        <a href="#" class="header item">
+          <img class="logo" src="icons/yangloong128x128.ico">
+        </a>
+        <div class="ui item"><i class="big github icon"></i><a href="https://github.com/YangLoong">YangLoong</a></div>
+        <div class="right menu">
+          <a class="ui item "><i class="write icon"></i>Blog</a>
+          <a class="ui item "><i class="user icon"></i>About</a>
+          <a class="ui item "><i class="mail icon"></i>Contact</a>
+        </div>
+      </div>
+    </div>
+    <h1 class="project-name">Yangloong&#39;s Blog</h1>
+    <h2 class="project-tagline">Tomorrow is another day...</h2>
+  </section>
 
-    <section class="main-content">
-      <!--<h1><a id="yangloonggithubio" class="anchor" href="#yangloonggithubio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>YangLoong.github.io</h1>-->
-
-      <div class="ui raised very padded container segment">
-        <!--<h2>YangLoong 's Blog</h2>-->
-        <h2>Image Processing</h2>
-        <div class="ui special link cards">
-          <div class="card">
-            <div class="blurring dimmable image">
-              <div class="ui dimmer">
-                <div class="content">
-                  <div class="center">
-                    <div class="ui inverted button" onclick="window.location='posts/image_processing/point_operations/point_operations.html';">More details</div>
-                  </div>
+  <div class="ui main stackable container">
+    <div class="ui basic text segment" id="blog3">
+      <div class="ui left dividing attached rail" style="min-height: 526.23px;">
+        <div class="ui sticky" style="width: 272px !important; height: 526.23px !important; left: 274.5px; top: 0px; padding-top:2cm;">
+          <h2 class="ui header">Recent Posts</h2>
+          <div class="ui divided items">
+            <div class="item">
+              <div class="ui tiny image">
+                <img src="posts/image_processing/point_operations/image/image22.png" style="cursor: pointer;" onclick="window.location='posts/image_processing/point_operations/point_operations.html';">
+              </div>
+              <div class="middle aligned content">
+                <a class="header" href="posts/image_processing/point_operations/point_operations.html">Point Operations</a>
+                <div class="meta">
+                  <span class="author">By <a href="https://github.com/YangLoong">YangLoong</a></span>
+                </div>
+                <div class="meta">
+                  <span class="time">Post at <a>March,20,2016</a></span>
                 </div>
               </div>
-              <img src="posts/image_processing/point_operations/image/image22.png" width="" height="">
             </div>
-
-            <div class="content">
-              <a class="header" href="posts/image_processing/point_operations/point_operations.html">Point Operations</a>
-              <div class="meta">
-                <i class="user icon"></i>
-                <a href="https://github.com/YangLoong">YangLoong</a>
+            <div class="item">
+              <div class="ui tiny image">
+                <img src="posts/image_processing/fft_dct/image/FFT.png" style="cursor: pointer;" onclick="window.location='posts/image_processing/fft_dct/fft_dct.html';">
               </div>
-              <div class="description">
-                This is an introduction as well as an implementation of image point operations with C#.
-              </div>
-            </div>
-            <div class="extra content">
-              <span class="right floated">
-                Post at March,20,2016
-              </span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="blurring dimmable image">
-              <div class="ui dimmer">
-                <div class="content">
-                  <div class="center">
-                    <div class="ui inverted button" onclick="window.location='posts/image_processing/fft_dct/fft_dct.html';">More details</div>
-                  </div>
+              <div class="middle aligned content">
+                <a class="header">FFT&&DCT</a>
+                <div class="meta">
+                  <span class="author">By <a href="https://github.com/YangLoong">YangLoong</a></span>
+                </div>
+                <div class="meta">
+                  <span class="time">Post at <a>April,6,2016</a></span>
                 </div>
               </div>
-              <img src="posts/image_processing/fft_dct/image/FFT.png" width="" height="">
             </div>
-
-            <div class="content">
-              <a class="header" href="posts/image_processing/fft_dct/fft_dct.html">FFT&&DCT</a>
-              <div class="meta">
-                <i class="user icon"></i>
-                <a href="https://github.com/YangLoong">YangLoong</a>
+            <div class="item">
+              <div class="ui tiny image">
+                <img src="posts/image_processing/edge_detection/image/Gauss-Laplacian算子.png" style="cursor: pointer;" onclick="window.location='posts/image_processing/edge_detection/edge_detection.html';">
               </div>
-              <div class="description">
-                This is an introduction as well as an implementation of FFT&&DCT with C#.
-              </div>
-            </div>
-            <div class="extra content">
-              <span class="right floated">
-                Post at April,6,2016
-              </span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="blurring dimmable image">
-              <div class="ui dimmer">
-                <div class="content">
-                  <div class="center">
-                    <div class="ui inverted button" onclick="window.location='posts/image_processing/edge_detection/edge_detection.html';">More details</div>
-                  </div>
+              <div class="middle aligned content">
+                <a class="header">Edge Detection</a>
+                <div class="meta">
+                  <span class="author">By <a href="https://github.com/YangLoong">YangLoong</a></span>
+                </div>
+                <div class="meta">
+                  <span class="time">Post at <a>April,20,2016</a></span>
                 </div>
               </div>
-              <img src="posts/image_processing/edge_detection/image/Gauss-Laplacian算子.png" width="" height="">
             </div>
-            <div class="content">
-              <a class="header" href="posts/image_processing/edge_detection/edge_detection.html">Edge Detection</a>
-              <div class="meta">
-                <i class="user icon"></i>
-                <a href="https://github.com/YangLoong">YangLoong</a>
+            <div class="item">
+              <div class="ui tiny image">
+                <img src="posts/image_processing/orl_face_recognition/image/ORL%20Face%20Recognition_页面_01.jpg" style="cursor: pointer;" onclick="window.location='posts/image_processing/orl_face_recognition/orl_face_recognition.html';">
               </div>
-              <div class="description">
-                This is an introduction as well as an implementation of Edge Detection with C#.
-              </div>
-            </div>
-            <div class="extra content">
-              <span class="right floated">
-                Post at April,20,2016
-              </span>
-            </div>
-          </div>
-          <div class="card">
-            <div class="blurring dimmable image">
-              <div class="ui dimmer">
-                <div class="content">
-                  <div class="center">
-                    <div class="ui inverted button" onclick="window.location='posts/image_processing/orl_face_recognition/orl_face_recognition.html';">More details</div>
-                  </div>
+              <div class="middle aligned content">
+                <a class="header">ORL Face Recognition</a>
+                <div class="meta">
+                  <span class="author">By <a href="https://github.com/YangLoong">YangLoong</a></span>
+                </div>
+                <div class="meta">
+                  <span class="time">Post at <a>June,1,2016</a></span>
                 </div>
               </div>
-              <img src="posts/image_processing/orl_face_recognition/image/ORL%20Face%20Recognition_页面_01.jpg" width="" height="">
-            </div>
-            <div class="content">
-              <a class="header" href="posts/image_processing/orl_face_recognition/orl_face_recognition.html">ORL Face Recognition</a>
-              <div class="meta">
-                <i class="user icon"></i>
-                <a href="https://github.com/YangLoong">YangLoong</a>
-              </div>
-              <div class="description">
-                This is a ORL face recognition competition implemented with torch7.
-              </div>
-            </div>
-            <div class="extra content">
-              <span class="right floated">
-                Post at June,1,2016
-              </span>
             </div>
           </div>
         </div>
-
-        <!--<a class="ui primary huge button" href="">FFT&DCT</a>-->
-        <!--<a class="ui primary huge button" href="">Edge Detection</a>-->
-
-        <h2>Write 1000 words everyday will change your life...</h2>
       </div>
+      <div class="ui dividing right rail" style="min-height: 262.531px;">
+        <div class="ui sticky" style="width: 283px !important; height: 585px !important; left: 1201px; padding-top:2cm;">
+          <h2 class="ui header">Category</h2>
+          <div class="ui vertical following accordion huge inverted menu">
+            <div class="item active">
+              <div class="active title"><i class="dropdown icon"></i> <b>Image Processing(4)</b></div>
+              <div class="active content menu">
+                <a class="active item" href="#point_opeations">Point Operations</a>
+                <a class="item" href="#fft_dct">FFT&&DCT</a>
+                <a class="item" href="#edge_detection">Edge Detection</a>
+                <a class="item" href="#orl_face_recognition">ORL Face Recognition</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="main-content">
+        <div class="ui raised very padded container segment main-content">
+          <!--<h2>YangLoong 's Blog</h2>-->
+          <h2 id="image_processing">Image Processing</h2>
+          <div class="ui special link cards">
+            <div class="blog card" id="point_opeations">
+              <div class="blurring dimmable image">
+                <div class="ui dimmer">
+                  <div class="content">
+                    <div class="center">
+                      <div class="ui inverted button" onclick="window.location='posts/image_processing/point_operations/point_operations.html';">More details</div>
+                    </div>
+                  </div>
+                </div>
+                <img src="posts/image_processing/point_operations/image/image22.png" width="" height="">
+              </div>
+
+              <div class="content">
+                <a class="header" href="posts/image_processing/point_operations/point_operations.html">Point Operations</a>
+                <div class="meta">
+                  <i class="user icon"></i>
+                  <a href="https://github.com/YangLoong">YangLoong</a>
+                </div>
+                <div class="description" style="color: #00bdff;">
+                  This is an introduction as well as an implementation of image point operations with C#.
+                </div>
+              </div>
+              <div class="extra content">
+                <span class="right floated">
+                  Post at March,20,2016
+                </span>
+              </div>
+            </div>
+            <div class="blog card" id="fft_dct">
+              <div class="blurring dimmable image">
+                <div class="ui dimmer">
+                  <div class="content">
+                    <div class="center">
+                      <div class="ui inverted button" onclick="window.location='posts/image_processing/fft_dct/fft_dct.html';">More details</div>
+                    </div>
+                  </div>
+                </div>
+                <img src="posts/image_processing/fft_dct/image/FFT.png" width="" height="">
+              </div>
+
+              <div class="content">
+                <a class="header" href="posts/image_processing/fft_dct/fft_dct.html">FFT&&DCT</a>
+                <div class="meta">
+                  <i class="user icon"></i>
+                  <a href="https://github.com/YangLoong">YangLoong</a>
+                </div>
+                <p class="description" style="color: #00bdff;">
+                  This is an introduction as well as an implementation of FFT&&DCT with C#.
+                </p>
+              </div>
+              <div class="extra content">
+                <span class="right floated">
+                  Post at April,6,2016
+                </span>
+              </div>
+            </div>
+            <div class="blog card" id="edge_detection">
+              <div class="blurring dimmable image">
+                <div class="ui dimmer">
+                  <div class="content">
+                    <div class="center">
+                      <div class="ui inverted button" onclick="window.location='posts/image_processing/edge_detection/edge_detection.html';">More details</div>
+                    </div>
+                  </div>
+                </div>
+                <img src="posts/image_processing/edge_detection/image/Gauss-Laplacian算子.png" width="" height="">
+              </div>
+              <div class="content">
+                <a class="header" href="posts/image_processing/edge_detection/edge_detection.html">Edge Detection</a>
+                <div class="meta">
+                  <i class="user icon"></i>
+                  <a href="https://github.com/YangLoong">YangLoong</a>
+                </div>
+                <div class="description" style="color: #00bdff;">
+                  This is an introduction as well as an implementation of Edge Detection with C#.
+                </div>
+              </div>
+              <div class="extra content">
+                <span class="right floated">
+                  Post at April,20,2016
+                </span>
+              </div>
+            </div>
+            <div class="blog card" id="orl_face_recognition">
+              <div class="blurring dimmable image">
+                <div class="ui dimmer">
+                  <div class="content">
+                    <div class="center">
+                      <div class="ui inverted button" onclick="window.location='posts/image_processing/orl_face_recognition/orl_face_recognition.html';">More details</div>
+                    </div>
+                  </div>
+                </div>
+                <img src="posts/image_processing/orl_face_recognition/image/ORL%20Face%20Recognition_页面_01.jpg" width="" height="">
+              </div>
+              <div class="content">
+                <a class="header" href="posts/image_processing/orl_face_recognition/orl_face_recognition.html">ORL Face Recognition</a>
+                <div class="meta">
+                  <i class="user icon"></i>
+                  <a href="https://github.com/YangLoong">YangLoong</a>
+                </div>
+                <div class="description" style="color: #00bdff;">
+                  This is a ORL face recognition competition implemented with torch7.
+                </div>
+              </div>
+              <div class="extra content">
+                <span class="right floated">
+                  Post at June,1,2016
+                </span>
+              </div>
+            </div>
+          </div>
+          <!--<a class="ui primary huge button" href="">FFT&DCT</a>-->
+          <!--<a class="ui primary huge button" href="">Edge Detection</a>-->
+          <h2>Write 1000 words everyday will change your life...</h2>
+        </div>
+      </section>
+
+    </div>
+  </div>
+    <section class="main-content">
+      <!--<h1><a id="yangloonggithubio" class="anchor" href="#yangloonggithubio" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>YangLoong.github.io</h1>-->
       <footer class="site-footer">
         <div class="ui vertical footer segment">
           <div class="ui center aligned container">
@@ -205,9 +468,6 @@
           </div>
         </div>
       </footer>
-
     </section>
-
-  
   </body>
 </html>
